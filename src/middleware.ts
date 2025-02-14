@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 
-export async function middleware(req: any) {
+export async function middleware(req: NextRequest) {
   // Cookie에서 accessToken 확인
   const token = req.cookies.get('accessToken')
 
